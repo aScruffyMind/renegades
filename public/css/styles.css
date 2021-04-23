@@ -88,7 +88,7 @@ footer {
 }
 
 .selected {
-    background-color: #fff;
+    background-color: #fff !important;
     border: 2px solid green;
     transform: scale(1.04, 1.04);
     box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
@@ -133,7 +133,7 @@ footer {
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: rgba(254, 254, 254, 0.82);
+    background-color: rgba(240, 240, 240, 0.82);
     align-items: center;
     justify-content: space-between;
     box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.20);
@@ -143,19 +143,19 @@ footer {
     user-select: none;
 }
 
-.trainer-card:active {
+/* .trainer-card:active {
     transform: scale(1.06, 1.06);
     box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
     background-color: #fff;
     transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
-}
+} */
 
-.trainer-card:hover {
+/* .trainer-card:hover {
     transform: scale(1.04, 1.04);
     box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
     background-color: #fff;
     transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
-}
+} */
 
 .trainer-card img {
     height: 52px;
