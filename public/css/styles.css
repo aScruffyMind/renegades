@@ -27,7 +27,7 @@ footer {
 
 .background {
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(/public/img/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(../img/background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +42,7 @@ footer {
     height: 50px;
     width: 50px;
     text-align: center;
-    background-image: url(/public/img/checkbox-dark.png);
+    background-image: url(../img/checkbox-dark.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 25px;
@@ -97,7 +97,7 @@ footer {
 }
 
 .selected .checkbox {
-    background-image: url(/public/img/checkbox-checked.png);
+    background-image: url(../img/checkbox-checked.png);
 }
 
 .team-logo {
@@ -115,15 +115,15 @@ footer {
 }
 
 .team-mystic {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.60)), url(/public/img/team_background_mystic.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.60)), url(../img/team_background_mystic.jpg);
 }
 
 .team-valor {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(/public/img/team_background_valor.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(../img/team_background_valor.jpg);
 }
 
 .team-instinct {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(/public/img/team_background_instinct.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(../img/team_background_instinct.jpg);
 }
 
 .trainer-card {
