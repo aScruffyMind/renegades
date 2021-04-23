@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=B612+Mono&family=Noto+Sans+TC&family=Rubik:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+
+}
+
+footer {
+    width: 100%;
+}
+
+#copyright {
+    color: #fff;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    max-width: 600px;
+    width: 95%;
+    margin: auto;
+}
+
+.background {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(/public/img/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkbox {
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    background-image: url(/public/img/checkbox-dark.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.column {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 95%;
+}
+
+.friend_code {
+    padding: 0 5px 5px;
+    font-family: 'B612 Mono', monospace;
+    font-size: 80%;
+    color: #777;
+}
+
+.main-window {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.65);
+    max-width: 400px;
+    width: 95%;
+    margin: 5px auto;
+    padding: 10px;
+    align-items: center;
+}
+
+.name {
+    justify-content: space-around;
+    padding-left: 15px;
+    height: 93%;
+    flex-grow: 3;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.selected {
+    background-color: #fff;
+    border: 2px solid green;
+    transform: scale(1.04, 1.04);
+    box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.selected .checkbox {
+    background-image: url(/public/img/checkbox-checked.png);
+}
+
+.team-logo {
+    height: 57px;
+    width: 60px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-size: 60px;
+    pointer-events: none;
+}
+
+.team-mystic {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.60)), url(/public/img/team_background_mystic.jpg);
+}
+
+.team-valor {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(/public/img/team_background_valor.jpg);
+}
+
+.team-instinct {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(/public/img/team_background_instinct.jpg);
+}
+
+.trainer-card {
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    margin: 6px auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgba(254, 254, 254, 0.82);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.20);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.trainer-card:active {
+    transform: scale(1.06, 1.06);
+    box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
+    background-color: #fff;
+    transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.04, 1.04);
+    box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
+    background-color: #fff;
+    transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
+}
+
+.trainer-card img {
+    height: 52px;
+    margin: 3px;
+}
+
+.trainer-name {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 130%;
+}
+
