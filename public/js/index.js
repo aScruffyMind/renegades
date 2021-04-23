@@ -5,3 +5,5 @@ trainerCards.forEach((x, i, a) => {
         x.classList.toggle('selected');
     });
 });
+
+console.log(trainers[0].trainer);
