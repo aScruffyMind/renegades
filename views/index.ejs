@@ -10,101 +10,33 @@
     <script defer src="js/index.js"></script>
     <title>Renegades Raid Roster</title>
 </head>
+<html class="background">
 
-<body class="background" ontouchstart="">
+<body class="" ontouchstart="">
     <img id="logo" src="img/raid_roster_logo.png" alt="">
-    
+
     <div class="row">
         <section class="main-window">
-
-            <div id="SavageWookiee" class="trainer-card">
-                <div class="team-logo team-mystic">
-                    <img src="img/team_mystic.png" alt="mystic">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">SavageWookiee</span>
-                    <span class="friend_code">6910 6678 1190</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div id="WynterPhoenyx" class="trainer-card">
-                <div class="team-logo team-mystic">
-                    <img src="img/team_mystic.png" alt="mystic">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">WynterPhoenyx</span>
-                    <span class="friend_code">1234 5678 9101</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div class="trainer-card">
-                <div class="team-logo team-valor">
-                    <img src="img/team_valor.png" alt="">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">Chickensnow</span>
-                    <span class="friend_code">7116 0094 7914</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div class="trainer-card">
-                <div class="team-logo team-instinct">
-                    <img src="img/team_instinct.png" alt="">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">Cazisossum</span>
-                    <span class="friend_code">5388 7497 5707</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div class="trainer-card">
-                <div class="team-logo team-mystic">
-                    <img src="img/team_mystic.png" alt="">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">Shimjeanne</span>
-                    <span class="friend_code">1875 7087 5439</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div class="trainer-card">
-                <div class="team-logo team-instinct">
-                    <img src="img/team_instinct.png" alt="">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">BrintonJames</span>
-                    <span class="friend_code">0763 1284 2521</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
-            <div id="SavagePadawan" class="trainer-card">
-                <div class="team-logo team-mystic">
-                    <img src="img/team_mystic.png" alt="mystic">
-                </div>
-                <div class="column name">
-                    <span class="trainer-name">SavagePadawan</span>
-                    <span class="friend_code">1812 0568 7353</span>
-                </div>
-                <div class="checkbox"></div>
-            </div>
-
+            <!-- INSERT DOCUMENT FRAGMENT HERE -->
         </section>
     </div>
+    <div class="button-container">
+        <div class="submit-button">
+            <div class="total"><img src="img/silhouette.png" alt=""><span class="counter">0</span> </div>
+            <span>LET'S GO!</span>
+        </div>
+    </div>
+
     <footer>
-        <div id="copyright">&copy;2021 Scruffy Minds Web Design</div>
+        <div id="copyright"><span style="font-size: 80%;">&copy;</span>&nbsp;2021 Scruffy Minds Web Design</div>
     </footer>
     </div>
     </div>
     <script>
-        const trainers = <%- JSON.stringify(trainerData)%>
-        
+        const trainers = <%-JSON.stringify(trainerData) %>;
     </script>
 </body>
+
+</html>
 
 </html>

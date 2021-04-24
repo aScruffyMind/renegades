@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio&family=B612+Mono&family=Noto+Sans+TC&family=Rubik:wght@300&display=swap');
 
+@media (hover: hover) and (pointer: fine) {
+    .trainer-card:hover {
+        transform: scale(1.04, 1.04);
+        box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
+        background-color: #fff;
+        transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
 
-body {
-    background-color: #000;
-
-}
-
 footer {
     width: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+input[type=text]:focus {
+    border: 0;
+    background-color: transparent;
+    outline: none;
 }
 
 #copyright {
@@ -26,11 +37,23 @@ footer {
 }
 
 .background {
+    background-color: #000;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(../img/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 1)), url(../img/background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+}
+
+.button-container {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    padding: 0 5px;
+    position: fixed;
+    right: 0;
 }
 
 .checkbox {
@@ -55,11 +78,18 @@ footer {
     width: 95%;
 }
 
-.friend_code {
+.counter {
+    margin-left: 2px;
+    padding-bottom: 4px;
+}
+
+.friend-code {
     padding: 0 5px 5px;
     font-family: 'B612 Mono', monospace;
     font-size: 80%;
     color: #777;
+    border: 0;
+    background-color: transparent;
 }
 
 .main-window {
@@ -89,6 +119,7 @@ footer {
 
 .selected {
     background-color: #fff !important;
+    color: #000 !important;
     border: 2px solid green;
     transform: scale(1.04, 1.04);
     box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
@@ -98,6 +129,27 @@ footer {
 
 .selected .checkbox {
     background-image: url(../img/checkbox-checked.png);
+}
+
+.submit-button {
+    align-items: center;
+    background: linear-gradient(90deg, rgba(146, 213, 130, .98), rgba(38, 196, 153, .98));
+    border: 1px solid rgba(46, 213, 130, .50);
+    border-radius: 50px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    font-size: 115%;
+    font-weight: 400;
+    height: 63px;
+    justify-content: center;
+    margin: 13px auto;
+    padding: 15px auto;
+    position: relative;
+    text-align: center;
+    width: 325px;
 }
 
 .team-logo {
@@ -126,6 +178,32 @@ footer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(../img/team_background_instinct.jpg);
 }
 
+.team-harmony {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(../img/team_background_harmony.jpg);
+}
+
+.total {
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .20), rgba(255, 255, 255, .25));
+    border-radius: 100px;
+    display: flex;
+    font-size: 110%;
+    height: 48px;
+    justify-content: center;
+    line-height: 45px;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 49px;
+}
+
+.total img {
+    height: 33%;
+    margin-right: 2px;
+    position: relative;
+}
+
 .trainer-card {
     border: 1px solid #ddd;
     border-radius: 9px;
@@ -141,6 +219,7 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #444;
 }
 
 .trainer-card img {
@@ -151,14 +230,4 @@ footer {
 .trainer-name {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 130%;
-}
-
-
-@media (hover: hover) and (pointer: fine) {
-    .trainer-card:hover {
-        transform: scale(1.04, 1.04);
-        box-shadow: 2px 3px 2.5px rgba(0, 0, 0, 0.20);
-        background-color: #fff;
-        transition: transform 0.05s, box-shadow 0.05s, background-color 0.05s;
-    }
 }
