@@ -40,39 +40,15 @@ const trainerSchema = new Schema({
 
 const Trainer = mongoose.model('Trainer', trainerSchema);
 
-// const trainers = (function() {
-//     const trainers = [];
-    
-
-//     mongo('connect')
-//     Trainer.find({}, function (err, foundTrainers) {
-
-//         mongo('close');
-//         console.log(foundTrainers);
-
-//         res.render('index', {
-//             trainerData: foundTrainers,
-//         });
-
-//     });
-// })();
-
 app.get('/', function (req, res) {
        mongo('connect')
        Trainer.find({}, function (err, foundTrainers) {
-           
             mongo('close');
-            console.log(foundTrainers);
-            
             res.render('index', {
                 trainerData: foundTrainers,
             });
-           
        });
-    // res.render('index');
 });
-
-
 
 let port = process.env.PORT;
 if (port == null || port == "") {
