@@ -24,10 +24,9 @@ function copyText() {
     text.setSelectionRange(0, 99999); /* For mobile devices */
     d.execCommand('copy');
     alert('Copied! Now go paste into Pokémon GO.');
-    chosenOnesWindow.classList.add('hidden');
+    togglePopup();
     document.getSelection().removeAllRanges();
 }
-
 
 // create a new trainer card with a trainer object
 function createTrainerCard(data) {
@@ -68,6 +67,12 @@ function createTrainerCard(data) {
     return trainerCard;
 }
 
+function togglePopup() {
+    chosenOnesWindow.classList.toggle('hidden');
+    document.querySelector('.overlay').classList.toggle('hidden');
+    document.body.classList.toggle('stop-scrolling');
+}
+
 // create trainer cards for each trainer in the data.
 trainers.forEach((item, index, arr) => {
     const trainerCard = createTrainerCard(item);
@@ -91,17 +96,18 @@ trainerCards.forEach((x, i, a) => {
 
 /********** LISTENERS **********/
 backButton.addEventListener('click', () => {
-    chosenOnesWindow.classList.add('hidden');
+    togglePopup();
 });
 
 copyButton.addEventListener('click', copyText);
 
 submitButton.addEventListener('click', () => {
     const selected = Array.from(d.querySelectorAll('.selected'));
-    const chosenOnes = selected.map(x => {
-        return x.children[1].children[0].innerHTML;
+    const chosenOnes = selected.map(trainer => {
+        return trainer.children[1].children[0].innerHTML;
     });
     const searchString = chosenOnes.join(', ');
     d.getElementById('the-chosen').value = searchString;
-    chosenOnesWindow.classList.remove('hidden');
+    togglePopup();
 });
+
