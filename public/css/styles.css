@@ -13,6 +13,25 @@
     box-sizing: border-box;
 }
 
+body:before {
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .75)), url(../img/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
 footer {
     width: 100%;
     font-family: 'Noto Sans TC', sans-serif;
@@ -52,16 +71,6 @@ input[type=text]:focus {
     width: 90%;
 }
 
-.background {
-    background-color: #000;
-    background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 1)), url(../img/background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
 .button-container {
     bottom: 0;
     display: flex;
@@ -91,11 +100,12 @@ input[type=text]:focus {
     font-family: 'Noto Sans TC', sans-serif;
     left: 50%;
     padding: 15px auto;
+    max-width: 500px;
     position: fixed;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
+    width: 96%;
     z-index: 5;
 }
 
