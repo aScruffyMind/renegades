@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio&family=B612+Mono&family=Noto+Sans+TC&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Noto+Sans+TC:wght@400;500&family=Prompt:wght@400;500&display=swap');
 
 @media (hover: hover) and (pointer: fine) {
     .trainer-card:hover {
@@ -16,6 +16,7 @@
 footer {
     width: 100%;
     font-family: 'Noto Sans TC', sans-serif;
+    padding-bottom: 80px;
 }
 
 input[type=text]:focus {
@@ -34,6 +35,21 @@ input[type=text]:focus {
     max-width: 600px;
     width: 95%;
     margin: auto;
+}
+
+#the-chosen {
+    background-color: rbga(255, 255, 255, .6);
+    border: 1px solid rgba(53, 213, 199);
+    border-radius: 12px;
+    color: rgba(38, 196, 153);
+    font-family: 'Prompt', sans-serif;
+    font-size: 120%;
+    margin: 10px auto;
+    min-height: 10em;
+    outline: none;
+    padding: 5px;
+    resize: none;
+    width: 90%;
 }
 
 .background {
@@ -71,11 +87,51 @@ input[type=text]:focus {
     background-size: 25px;
 }
 
+.chosen-ones-container {
+    font-family: 'Noto Sans TC', sans-serif;
+    left: 50%;
+    padding: 15px auto;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    z-index: 5;
+}
+
+.chosen-ones-container p {
+    font-size: 110%;
+    margin: 5px 0 10px;
+    width: 90%;
+}
+
+.chosen-ones {
+    align-items: center;
+    background: linear-gradient(90deg, rgba(249, 254, 249, .95), rgba(242, 255, 241, 0.95));
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: rgba(55, 87, 90);
+    box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+    justify-content: center;
+    margin: 6px auto;
+    padding: 13px;
+    width: 100%;
+}
+
 .column {
     display: flex;
     margin: auto;
     flex-direction: column;
     width: 95%;
+}
+
+.copy-button {
+    box-shadow: 1px 1px 2px rgba(146, 213, 130, .15) !important;
+    height: 55px !important;
+    width: 90% !important;
 }
 
 .counter {
@@ -92,13 +148,17 @@ input[type=text]:focus {
     background-color: transparent;
 }
 
+.hidden {
+    display: none;
+}
+
 .main-window {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.45);
     max-width: 400px;
     width: 95%;
-    margin: 5px auto;
+    margin: 5px auto 0;
     padding: 10px;
     align-items: center;
 }
@@ -140,9 +200,9 @@ input[type=text]:focus {
     color: #fff;
     display: flex;
     flex-direction: row;
-    font-family: sans-serif;
-    font-size: 115%;
-    font-weight: 400;
+    font-family: 'Prompt', sans-serif !important;
+    font-size: 110%;
+    font-weight: 500;
     height: 63px;
     justify-content: center;
     margin: 13px auto;
@@ -187,8 +247,9 @@ input[type=text]:focus {
     background: linear-gradient(90deg, rgba(255, 255, 255, .20), rgba(255, 255, 255, .25));
     border-radius: 100px;
     display: flex;
-    font-size: 110%;
+    font-size: 95%;
     height: 48px;
+    letter-spacing: 0;
     justify-content: center;
     line-height: 45px;
     left: 10px;
