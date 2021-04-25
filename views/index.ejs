@@ -6,38 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Scruffy Minds Web Design">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/index.js"></script>
     <title>Renegades Raid Roster</title>
 </head>
 <html>
 
-<body ontouchstart="">
-    <img id="logo" src="img/raid_roster_logo.png" alt="">
-<!-- 
-    <div class="chosen-ones-container hidden">
-        <div class="chosen-ones">
-            <p>The chosen ones!</p>
-            <textarea name="the-chosen" id="the-chosen" readonly></textarea>
-            <div id="copy-button" class="submit-button copy-button">COPY</div>
-            <p id="back-button">GO BACK</p>
+<body class="" ontouchstart="">
+    <div class="overlay hidden">
+        <div class="chosen-ones-container hidden">
+            <div class="chosen-ones">
+                <p>The chosen ones!</p>
+                <textarea name="the-chosen" id="the-chosen" readonly></textarea>
+                <div id="copy-button" class="submit-button copy-button">COPY</div>
+                <p id="back-button">GO BACK</p>
+            </div>
         </div>
-    </div> -->
+    </div>
 
+    <img id="logo" src="img/raid_roster_logo.png" alt="">
 
     <div class="row">
-            <div class="chosen-ones-container hidden">
-                <div class="chosen-ones">
-                    <p>The chosen ones!</p>
-                    <textarea name="the-chosen" id="the-chosen" readonly></textarea>
-                    <div id="copy-button" class="submit-button copy-button">COPY</div>
-                    <p id="back-button">GO BACK</p>
-                </div>
-            </div>
         <section class="main-window">
-            <!-- INSERT DOCUMENT FRAGMENT HERE -->
+            <!-- DOCUMENT FRAGMENT -->
         </section>
     </div>
+
     <div class="button-container">
         <div id="submit-button" class="submit-button">
             <div class="total"><img src="img/silhouette.png" alt=""><span class="counter">0</span> </div>
@@ -48,13 +52,11 @@
     <footer>
         <div id="copyright"><span style="font-size: 80%;">&copy;</span>&nbsp;2021 Scruffy Minds Web Design</div>
     </footer>
-    </div>
-    </div>
+
     <script>
         const trainers = <%-JSON.stringify(trainerData) %>;
     </script>
+    
 </body>
-
-</html>
 
 </html>

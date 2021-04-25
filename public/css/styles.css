@@ -13,8 +13,11 @@
     box-sizing: border-box;
 }
 
-body:before {
+body {
     background-color: #000;
+}
+
+body:before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .75)), url(../img/background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -26,7 +29,7 @@ body:before {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: -10;
+    z-index: -1;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -52,8 +55,10 @@ input[type=text]:focus {
 #logo {
     display: block;
     max-width: 600px;
+    position: relative;
     width: 95%;
     margin: auto;
+    z-index: 1;
 }
 
 #the-chosen {
@@ -79,6 +84,7 @@ input[type=text]:focus {
     padding: 0 5px;
     position: fixed;
     right: 0;
+    z-index: 1;
 }
 
 .checkbox {
@@ -105,8 +111,8 @@ input[type=text]:focus {
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 96%;
-    z-index: 5;
+    width: 95%;
+    z-index: 3;
 }
 
 .chosen-ones-container p {
@@ -128,7 +134,7 @@ input[type=text]:focus {
     justify-content: center;
     margin: 6px auto;
     padding: 13px;
-    width: 100%;
+    width: 90%;
 }
 
 .column {
@@ -170,7 +176,9 @@ input[type=text]:focus {
     width: 95%;
     margin: 5px auto 0;
     padding: 10px;
+    position: relative;
     align-items: center;
+    z-index: 1;
 }
 
 .name {
@@ -178,6 +186,20 @@ input[type=text]:focus {
     padding-left: 15px;
     height: 93%;
     flex-grow: 3;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    left: 50%;
+    padding: 15px auto;
+    position: relative;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    z-index: 2;
 }
 
 .row {
@@ -199,6 +221,11 @@ input[type=text]:focus {
 
 .selected .checkbox {
     background-image: url(../img/checkbox-checked.png);
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }
 
 .submit-button {
