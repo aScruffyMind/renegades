@@ -4,6 +4,8 @@ const trainerList = new DocumentFragment();
 const submitButton = d.getElementById('submit-button');
 const backButton = d.getElementById('back-button');
 const copyButton = d.getElementById('copy-button');
+const clearButton = d.getElementById('clear-button');
+
 const chosenOnesWindow = d.querySelector('.chosen-ones-container');
 
 function compare(a, b) {
@@ -17,6 +19,17 @@ function compare(a, b) {
 }
 
 trainers.sort(compare);
+
+function clearList() {
+    const selectedTrainers = JSON.parse(localStorage.getItem('selectedTrainers'));
+    if (selectedTrainers !== null && selectedTrainers.length > 0) {
+        selectedTrainers.forEach((x, i, a) => {
+            document.getElementById(`${x.toLowerCase()}`).classList.remove('selected');
+        });
+    }
+    window.localStorage.clear();
+    togglePopup();
+}
 
 function copyText() {
     const text = d.getElementById('the-chosen');
@@ -32,8 +45,8 @@ function copyText() {
 function createTrainerCard(data) {
     // define trainer details from data
     const thisName = data.trainer;
-    const thisTeam = (data.team === undefined || data.team === null || data.team ==='') ? 'harmony' : data.team;
-    const thisFriendCode = (data.friendCode === undefined) ? '???? ???? ????': data.friendCode;
+    const thisTeam = (data.team === undefined || data.team === null || data.team === '') ? 'harmony' : data.team;
+    const thisFriendCode = (data.friendCode === undefined) ? '???? ???? ????' : data.friendCode;
 
     // create trainer code elements
     const checkbox = d.createElement('div');
@@ -63,8 +76,18 @@ function createTrainerCard(data) {
     trainerCard.appendChild(team);
     trainerCard.appendChild(trainerInfo);
     trainerCard.appendChild(checkbox);
-   
+
     return trainerCard;
+}
+
+function populateUI() {
+    const selectedTrainers = JSON.parse(localStorage.getItem('selectedTrainers'));
+    if (selectedTrainers !== null && selectedTrainers.length > 0) {
+        selectedTrainers.forEach((x, i, a) => {
+            document.getElementById(`${x.toLowerCase()}`).classList.add('selected');
+        });
+    }
+
 }
 
 function togglePopup() {
@@ -76,7 +99,7 @@ function togglePopup() {
 // create trainer cards for each trainer in the data.
 trainers.forEach((item, index, arr) => {
     const trainerCard = createTrainerCard(item);
-    trainerList.appendChild(trainerCard);    
+    trainerList.appendChild(trainerCard);
 });
 
 // add new trainer list (document fragment) to main window
@@ -94,6 +117,8 @@ trainerCards.forEach((x, i, a) => {
     });
 });
 
+populateUI();
+
 /********** LISTENERS **********/
 backButton.addEventListener('click', () => {
     togglePopup();
@@ -101,13 +126,15 @@ backButton.addEventListener('click', () => {
 
 copyButton.addEventListener('click', copyText);
 
+clearButton.addEventListener('click', clearList);
+
 submitButton.addEventListener('click', () => {
     const selected = Array.from(d.querySelectorAll('.selected'));
     const chosenOnes = selected.map(trainer => {
         return trainer.children[1].children[0].innerHTML;
     });
     const searchString = chosenOnes.join(', ');
+    localStorage.setItem('selectedTrainers', JSON.stringify(chosenOnes));
     d.getElementById('the-chosen').value = searchString;
     togglePopup();
 });
-
