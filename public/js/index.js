@@ -4,6 +4,7 @@ const trainerList = new DocumentFragment();
 const submitButton = d.getElementById('submit-button');
 const backButton = d.getElementById('back-button');
 const copyButton = d.getElementById('copy-button');
+const counter = d.querySelector('.counter');
 const clearButton = d.getElementById('clear-button');
 
 const chosenOnesWindow = d.querySelector('.chosen-ones-container');
@@ -28,6 +29,8 @@ function clearList() {
         });
     }
     window.localStorage.clear();
+    const newSelected = d.querySelectorAll('.selected');
+    counter.innerText = newSelected.length;
     togglePopup();
 }
 
@@ -87,6 +90,8 @@ function populateUI() {
             document.getElementById(`${x.toLowerCase()}`).classList.add('selected');
         });
     }
+    const newSelected = d.querySelectorAll('.selected');
+    counter.innerHTML = newSelected.length;
 
 }
 
@@ -112,8 +117,8 @@ const trainerCards = d.querySelectorAll('.trainer-card');
 trainerCards.forEach((x, i, a) => {
     x.addEventListener('click', function () {
         x.classList.toggle('selected');
-        const counter = d.querySelectorAll('.selected').length;
-        d.querySelector('.counter').innerText = counter;
+        const totalSelected = d.querySelectorAll('.selected').length;
+        counter.innerText = totalSelected;
     });
 });
 
