@@ -50,10 +50,7 @@ app.get('/', function (req, res) {
        });
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 6969;
-}
+const port = (process.env.PORT) ? process.env.PORT : 6969;
 
 app.listen(port, function () {
     console.log("Server started on port " + port);
